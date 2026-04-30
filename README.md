@@ -581,7 +581,7 @@ run_demo()  # Runs everything
 
 ## Video Walkthrough
 
-📹 **[VibeFinder Pro Demo - Loom Video](https://www.loom.com/share/YOUR_LOOM_ID)** *(Add your Loom link here after recording)*
+📹 **[VibeFinder Pro Demo Video](https://drive.google.com/file/d/1hQ0JWoee7SS9n5bKhUiVTRIsholzifgi/view?usp=sharing)**
 
 The video demonstrates:
 1. ✅ End-to-end system run with 2-3 test profiles (pop/happy, lofi/chill, rock/intense users)
