@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VibeFinder Pro - AI Music Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>🎵 VibeFinder Pro</h1>
+                <p>AI-Powered Music Recommendations with RAG & Agentic Workflow</p>
+            </div>
+            <div class="health-check" id="healthCheck"></div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Left Panel: Input -->
+            <section class="panel input-panel">
+                <h2>Your Music Taste</h2>
+                <form id="recommendationForm">
+                    <div class="form-group">
+                        <label for="genre">Favorite Genre</label>
+                        <select id="genre" name="favorite_genre" required>
+                            <option value="">Select a genre...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mood">Favorite Mood</label>
+                        <select id="mood" name="favorite_mood" required>
+                            <option value="">Select a mood...</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="energy">Target Energy Level</label>
+                        <div class="slider-container">
+                            <input type="range" id="energy" name="target_energy" min="0" max="1" step="0.1" value="0.5">
+                            <span class="slider-value" id="energyValue">0.5</span>
+                        </div>
+                        <div class="slider-labels">
+                            <span>Chill</span>
+                            <span>Energetic</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group checkbox">
+                        <label>
+                            <input type="checkbox" id="acoustic" name="likes_acoustic" value="true">
+                            I prefer acoustic music
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Get Recommendations</button>
+                </form>
+
+                <!-- Quick Test Profiles -->
+                <div class="quick-profiles">
+                    <h3>Quick Profiles</h3>
+                    <button class="btn btn-small" onclick="loadProfile('pop', 'happy', 0.8, false)">Pop/Happy</button>
+                    <button class="btn btn-small" onclick="loadProfile('lofi', 'chill', 0.35, true)">Lofi/Chill</button>
+                    <button class="btn btn-small" onclick="loadProfile('rock', 'intense', 0.9, false)">Rock/Intense</button>
+                </div>
+            </section>
+
+            <!-- Right Panel: Output -->
+            <section class="panel output-panel">
+                <!-- Confidence & Workflow -->
+                <div id="workflowSection" class="workflow-section hidden">
+                    <div class="confidence-display">
+                        <div class="confidence-score" id="confidenceScore"></div>
+                        <p class="confidence-label">Confidence Score</p>
+                    </div>
+                    
+                    <div class="workflow-steps">
+                        <h3>AI Workflow</h3>
+                        <ul id="workflowList"></ul>
+                    </div>
+                </div>
+
+                <!-- Recommendations -->
+                <div id="recommendationsSection" class="recommendations-section hidden">
+                    <h2>Recommendations</h2>
+                    <div id="recommendationsList" class="recommendations-list"></div>
+                </div>
+
+                <!-- Reasoning -->
+                <div id="reasoningSection" class="reasoning-section hidden">
+                    <h3>AI Reasoning</h3>
+                    <p id="reasoningText"></p>
+                </div>
+
+                <!-- Loading & Error States -->
+                <div id="loadingState" class="loading-state hidden">
+                    <div class="spinner"></div>
+                    <p>Generating recommendations...</p>
+                </div>
+
+                <div id="errorState" class="error-state hidden">
+                    <p id="errorMessage"></p>
+                </div>
+
+                <!-- Empty State -->
+                <div id="emptyState" class="empty-state">
+                    <p>👈 Fill out your preferences and get personalized recommendations!</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Evaluation Section -->
+        <section class="evaluation-section">
+            <h2>System Evaluation</h2>
+            <p>Run reliability tests across multiple user profiles to measure diversity, relevance, novelty, and confidence calibration.</p>
+            <button class="btn btn-secondary" onclick="runEvaluation()">Run Full Evaluation</button>
+            <div id="evaluationResults" class="evaluation-results hidden">
+                <h3>Evaluation Results</h3>
+                <div class="metrics-grid" id="metricsGrid"></div>
+                <p id="evaluationSummary" class="evaluation-summary"></p>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>VibeFinder Pro | AI Music Recommendation System | <a href="https://github.com/sohini1728/applied-ai-system-final" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

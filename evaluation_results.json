@@ -1,6 +1,6 @@
 [
   {
-    "timestamp": "2026-04-30T16:25:23.826304",
+    "timestamp": "2026-04-30T16:40:40.984516",
     "total_profiles_tested": 4,
     "total_recommendations_generated": 20,
     "average_diversity": 0.7000000000000001,
@@ -23,8 +23,8 @@
         "calibration": 0.9329999999999999,
         "recommendation_count": 5,
         "sources": [
-          "exploration",
-          "direct_match"
+          "direct_match",
+          "exploration"
         ]
       },
       {
@@ -41,8 +41,8 @@
         "calibration": 0.9308,
         "recommendation_count": 5,
         "sources": [
-          "exploration",
-          "direct_match"
+          "direct_match",
+          "exploration"
         ]
       },
       {
@@ -59,8 +59,8 @@
         "calibration": 0.8048000000000001,
         "recommendation_count": 5,
         "sources": [
-          "exploration",
-          "direct_match"
+          "direct_match",
+          "exploration"
         ]
       },
       {
@@ -77,8 +77,8 @@
         "calibration": 0.9109999999999999,
         "recommendation_count": 5,
         "sources": [
-          "exploration",
-          "direct_match"
+          "direct_match",
+          "exploration"
         ]
       }
     ],
