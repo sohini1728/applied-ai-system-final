@@ -1,0 +1,87 @@
+[
+  {
+    "timestamp": "2026-04-30T16:25:23.826304",
+    "total_profiles_tested": 4,
+    "total_recommendations_generated": 20,
+    "average_diversity": 0.7000000000000001,
+    "average_relevance": 0.7000000000000001,
+    "average_novelty": 0.5,
+    "average_confidence": 0.8674333333333333,
+    "average_calibration": 0.8949,
+    "per_profile_metrics": [
+      {
+        "profile": {
+          "favorite_genre": "pop",
+          "favorite_mood": "happy",
+          "target_energy": 0.8,
+          "likes_acoustic": false
+        },
+        "diversity": 0.8,
+        "relevance": 0.6,
+        "novelty": 0.4,
+        "confidence": 0.8720000000000001,
+        "calibration": 0.9329999999999999,
+        "recommendation_count": 5,
+        "sources": [
+          "exploration",
+          "direct_match"
+        ]
+      },
+      {
+        "profile": {
+          "favorite_genre": "lofi",
+          "favorite_mood": "chill",
+          "target_energy": 0.35,
+          "likes_acoustic": true
+        },
+        "diversity": 0.6,
+        "relevance": 0.6,
+        "novelty": 0.4,
+        "confidence": 0.8705333333333334,
+        "calibration": 0.9308,
+        "recommendation_count": 5,
+        "sources": [
+          "exploration",
+          "direct_match"
+        ]
+      },
+      {
+        "profile": {
+          "favorite_genre": "rock",
+          "favorite_mood": "intense",
+          "target_energy": 0.9,
+          "likes_acoustic": false
+        },
+        "diversity": 0.8,
+        "relevance": 1.0,
+        "novelty": 0.8,
+        "confidence": 0.8698666666666666,
+        "calibration": 0.8048000000000001,
+        "recommendation_count": 5,
+        "sources": [
+          "exploration",
+          "direct_match"
+        ]
+      },
+      {
+        "profile": {
+          "favorite_genre": "jazz",
+          "favorite_mood": "relaxed",
+          "target_energy": 0.45,
+          "likes_acoustic": true
+        },
+        "diversity": 0.6,
+        "relevance": 0.6,
+        "novelty": 0.4,
+        "confidence": 0.8573333333333333,
+        "calibration": 0.9109999999999999,
+        "recommendation_count": 5,
+        "sources": [
+          "exploration",
+          "direct_match"
+        ]
+      }
+    ],
+    "overall_quality_score": 0.6794900000000001
+  }
+]
