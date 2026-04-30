@@ -1,0 +1,31 @@
+id,title,artist,genre,mood,energy,tempo_bpm,valence,danceability,acousticness
+1,Sunrise City,Bright Horizon,pop,happy,0.85,128,0.92,0.89,0.1
+2,Gym Hero,Neon Echo,pop,intense,0.92,135,0.78,0.81,0.05
+3,Midnight Coding,LoRoom,lofi,chill,0.35,95,0.65,0.42,0.78
+4,Library Rain,LoRoom,lofi,chill,0.32,88,0.62,0.38,0.85
+5,Focus Flow,Study Mode,lofi,focused,0.38,92,0.68,0.45,0.80
+6,Storm Runner,Thunder Road,rock,intense,0.88,145,0.72,0.75,0.12
+7,Coffee Shop Stories,Jazz Collective,jazz,relaxed,0.42,100,0.70,0.48,0.88
+8,Spacewalk Thoughts,Ambient Vibes,ambient,chill,0.28,78,0.58,0.35,0.92
+9,Night Drive Loop,Neon Echo,synthwave,moody,0.65,110,0.55,0.68,0.08
+10,Rooftop Lights,Urban Dreams,indie pop,happy,0.72,118,0.85,0.72,0.35
+11,Electric Dreams,Neon Echo,synthwave,energetic,0.79,125,0.76,0.82,0.06
+12,Ocean Waves,Coastal Sounds,ambient,relaxed,0.25,72,0.60,0.32,0.95
+13,Midnight Jazz,Jazz Collective,jazz,moody,0.45,105,0.65,0.52,0.82
+14,Urban Jungle,City Beats,hip-hop,intense,0.76,110,0.68,0.85,0.15
+15,Sunset Boulevard,Indie Wave,indie,romantic,0.55,105,0.78,0.60,0.45
+16,Dance Floor Groove,Party People,dance,happy,0.88,128,0.89,0.92,0.08
+17,Acoustic Morning,Folk Singer,folk,happy,0.50,100,0.82,0.55,0.92
+18,Ethereal Dreams,Dream Waves,ambient,dreamy,0.30,80,0.62,0.38,0.90
+19,Rainy Day Blues,Blues Master,blues,melancholic,0.48,95,0.55,0.58,0.85
+20,Classical Symphony,Orchestra,classical,intense,0.72,120,0.75,0.45,0.95
+21,Electronic Pulse,Synth Master,electronic,energetic,0.82,130,0.74,0.88,0.05
+22,Desert Journey,World Music,world,exotic,0.55,110,0.70,0.62,0.70
+23,Neon City Lights,Neon Echo,pop,happy,0.80,124,0.88,0.85,0.12
+24,Chill Lofi Evening,LoRoom,lofi,chill,0.36,90,0.64,0.40,0.82
+25,Metal Mayhem,Rock Kings,metal,intense,0.95,160,0.48,0.68,0.08
+26,Smooth Jazz Evening,Jazz Collective,jazz,relaxed,0.48,102,0.72,0.55,0.80
+27,Indie Summer,Indie Wave,indie,happy,0.68,115,0.84,0.70,0.55
+28,Lo-Fi Study Break,Study Mode,lofi,focused,0.40,94,0.66,0.43,0.78
+29,Energetic Pop,Pop Sensation,pop,happy,0.85,132,0.90,0.88,0.10
+30,Twilight Garden,Folk Singer,folk,peaceful,0.45,98,0.78,0.50,0.88
