@@ -12,46 +12,21 @@
 
 ## System Architecture
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    VibeFinder Pro                            │
-│                  AI-Enhanced Discovery                       │
-└─────────────────────────────────────────────────────────────┘
+For detailed architecture documentation, see [`assets/SYSTEM_ARCHITECTURE.md`](assets/SYSTEM_ARCHITECTURE.md)
 
-                          User Input
-                       (Taste Profile)
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────────┐
-│                    AGENT WORKFLOW                            │
-├─────────────────────────────────────────────────────────────┤
-│  Step 1: SCORE                                              │
-│  └─ Recommender: Direct genre/mood/energy matches          │
-│                                                              │
-│  Step 2: DISCOVER (RAG)                                    │
-│  └─ Retriever: Semantic similarity to top match             │
-│                                                              │
-│  Step 3: EXPLORE                                            │
-│  └─ Retriever: Adjacent genres for variety                 │
-│                                                              │
-│  Step 4: VALIDATE                                           │
-│  └─ Agent: Confidence scoring & reasoning                   │
-└─────────────────────────────────────────────────────────────┘
-                             │
-                             ▼
-┌─────────────────────────────────────────────────────────────┐
-│              EVALUATION & RELIABILITY                        │
-├─────────────────────────────────────────────────────────────┤
-│  • Diversity Metric (genre/artist variety)                  │
-│  • Relevance Metric (preference matching)                   │
-│  • Novelty Metric (discovery factor)                        │
-│  • Confidence Calibration (quality vs reported certainty)   │
-└─────────────────────────────────────────────────────────────┘
-                             │
-                             ▼
-                    Recommendations + 
-                    Confidence Score +
-                    Reasoning Narrative
+Quick overview:
+```
+User Input (taste profile) → AGENT WORKFLOW:
+  ├─ Step 1: SCORE (Recommender) - Direct matches
+  ├─ Step 2: DISCOVER (Retriever/RAG) - Semantic similarity
+  ├─ Step 3: EXPLORE (Retriever) - Adjacent genres
+  └─ Step 4: VALIDATE (Agent) - Rank & confidence
+
+         → EVALUATION:
+         └─ Measure diversity, relevance, novelty, calibration
+
+         → OUTPUT: 
+         └─ Recommendations + Confidence + Reasoning
 ```
 
 ## How It Works
@@ -606,13 +581,22 @@ run_demo()  # Runs everything
 
 ## Video Walkthrough
 
-[Loom Video Link: VibeFinder Pro System Demo](#) *(link added during submission)*
+📹 **[VibeFinder Pro Demo - Loom Video](https://www.loom.com/share/YOUR_LOOM_ID)** *(Add your Loom link here after recording)*
 
 The video demonstrates:
-1. ✅ End-to-end system run with 2-3 test profiles
-2. ✅ AI feature behavior (RAG retriever finding similar songs, agent multi-step planning)
-3. ✅ Reliability/guardrail behavior (confidence scoring, diversity metrics, error handling)
-4. ✅ Clear outputs for each input (formatted recommendations, reasoning narratives, evaluation scores)
+1. ✅ End-to-end system run with 2-3 test profiles (pop/happy, lofi/chill, rock/intense users)
+2. ✅ AI feature behavior:
+   - RAG retriever finding semantically similar songs
+   - Agent multi-step planning with 4 observable workflow steps
+   - Confidence scoring (0-1 scale) and reasoning narratives
+3. ✅ Reliability/guardrail behavior:
+   - Evaluation metrics (diversity, relevance, novelty, calibration)
+   - 13/13 tests passing
+   - Error handling and logging throughout
+4. ✅ Clear outputs for each input:
+   - Formatted recommendations with scores and reasons
+   - AI reasoning narratives explaining decisions
+   - Per-profile evaluation metrics
 
 ## Files & Folder Structure
 
