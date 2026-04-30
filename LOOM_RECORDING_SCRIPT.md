@@ -1,10 +1,83 @@
-# 🎬 EXACT LOOM VIDEO RECORDING SCRIPT
+# 🎬 EXACT LOOM VIDEO RECORDING SCRIPT (UPDATED WITH WEB FRONTEND)
 
-## ⏱️ Total Time: 6-7 minutes
+## ⏱️ Total Time: 8-10 minutes
 
 ---
 
-## STEP 1: Open Loom & Start Recording (Do This First)
+## OPTION A: Full Demo (Terminal + Web UI) - RECOMMENDED ⭐
+
+### STEP 1: Start Recording
+1. Go to https://www.loom.com
+2. Click "Start recording"
+3. Select "Record desktop" (so we can show both terminal + web browser)
+4. Start recording
+
+### STEP 2: Run Terminal Commands & Launch Web Server
+
+**Section A (0:00-1:00):** Show project structure
+```bash
+cd ~/applied-ai-system-final
+clear
+echo "=== VibeFinder Pro: AI Music Recommender ==="
+echo "Features: RAG Retrieval | Agentic Workflow | Reliability Testing"
+ls -la
+```
+
+**Section B (1:00-2:00):** Start web server
+```bash
+chmod +x run.sh
+./run.sh
+```
+
+**Say while loading:** "The Flask server is starting. It initializes the recommender, retriever, and agentic workflow components..."
+
+Wait until you see: `* Running on http://localhost:5000`
+
+### STEP 3: Switch to Browser & Test Web UI
+
+1. Open a **new browser tab** (keep terminal in view)
+2. Navigate to `http://localhost:5000`
+3. Screen-record the following interactions:
+
+**Section C (2:00-4:30):** Interactive Web Demo
+- Show health check showing "✅ System Healthy | 30 Songs | 14 Genres"
+- Click "Pop/Happy" quick profile button
+- Wait for recommendations to load (show spinning animation)
+- Point out:
+  - Confidence score (circular display)
+  - 4-step workflow in sidebar (Score → Discover → Explore → Validate)
+  - 5 recommendation cards with scores, reasons, and source
+  - AI reasoning narrative at bottom
+- Say: "The system retrieved songs using semantic similarity across 6 dimensions: genre, mood, energy, tempo, acousticness, and valence. Each recommendation explains its reasoning."
+
+**Section D (4:30-6:30):** Run Evaluation
+- Scroll down to "System Evaluation" section
+- Click "Run Full Evaluation"
+- Wait for metrics to compute
+- Show results:
+  - Diversity (genre/artist variety)
+  - Relevance (preference matching)
+  - Novelty (discovery outside stated genre)
+  - Calibration (confidence accuracy)
+  - Overall Score
+- Say: "The system achieves high marks across all metrics. These are reliability tests showing how well the AI performs across multiple user profiles."
+
+**Section E (6:30-8:00):** Show Code
+- Switch back to terminal
+- Run: `cat src/agent.py | head -50`
+- Say: "The core AI logic uses a multi-step planning approach. Here's the Agent class that orchestrates the workflow."
+- Then show: `head -10 README.md` 
+- Say: "Full documentation is available on GitHub with architecture diagrams and design decisions."
+
+### STEP 4: Finish Recording
+- Click "Stop" in Loom
+- Get your share link and add to README
+
+---
+
+## OPTION B: Terminal-Only Demo (If Web Demo Has Issues)
+
+### STEP 1: Open Loom & Start Recording (Do This First)
 
 1. Go to https://www.loom.com
 2. Click "Start recording"
@@ -12,9 +85,7 @@
 4. Select your **terminal/iTerm window**
 5. Start recording
 
----
-
-## STEP 2: Run This Exact Sequence in Terminal
+### STEP 2: Run This Exact Sequence in Terminal
 
 Copy and paste each section one at a time:
 
