@@ -1,77 +1,257 @@
-# 🎬 EXACT LOOM VIDEO RECORDING SCRIPT (UPDATED WITH WEB FRONTEND)
+# 🎬 LOOM VIDEO RECORDING SCRIPT - Web Frontend Demo
 
-## ⏱️ Total Time: 8-10 minutes
+## ⏱️ Total Time: 7-8 minutes
+
+**This is the RECOMMENDED approach** - Shows the beautiful web UI with interactive demonstrations.
 
 ---
 
-## OPTION A: Full Demo (Terminal + Web UI) - RECOMMENDED ⭐
+## 🎥 BEFORE YOU START
 
-### STEP 1: Start Recording
-1. Go to https://www.loom.com
-2. Click "Start recording"
-3. Select "Record desktop" (so we can show both terminal + web browser)
-4. Start recording
+1. Make sure the web server is working:
+   ```bash
+   cd ~/applied-ai-system-final
+   chmod +x run.sh
+   ./run.sh
+   ```
+   
+2. Open http://localhost:5000 in browser to verify it loads
 
-### STEP 2: Run Terminal Commands & Launch Web Server
+3. Go to https://www.loom.com and start recording your desktop
 
-**Section A (0:00-1:00):** Show project structure
+---
+
+## SECTION A: Terminal Setup (0:00-1:00)
+
+### What to Show:
+- Terminal with the project directory
+- Brief file listing
+
+### Commands to Run:
 ```bash
 cd ~/applied-ai-system-final
 clear
-echo "=== VibeFinder Pro: AI Music Recommender ==="
-echo "Features: RAG Retrieval | Agentic Workflow | Reliability Testing"
-ls -la
+echo "=== VibeFinder Pro: AI-Powered Music Recommender ==="
+echo "Extended from Module 3 with RAG, Agentic Workflow & Reliability Testing"
+echo ""
+ls -la src/ tests/ data/
 ```
 
-**Section B (1:00-2:00):** Start web server
+### What to Say:
+> "This is VibeFinder Pro, an applied AI system that extends my Module 3 music recommender. It has four core components: the recommender for content-based scoring, the RAG retriever for semantic similarity across 6 dimensions, the agent for multi-step workflow planning, and the evaluator for measuring reliability. The web interface lets users interact with this system in real-time."
+
+---
+
+## SECTION B: Start Web Server (1:00-1:30)
+
+### Commands:
 ```bash
-chmod +x run.sh
 ./run.sh
 ```
 
-**Say while loading:** "The Flask server is starting. It initializes the recommender, retriever, and agentic workflow components..."
+### What to Say:
+> "Now I'm launching the Flask web server. It's initializing all the AI components and will serve the interactive web interface on localhost:5000."
 
-Wait until you see: `* Running on http://localhost:5000`
+### Wait For:
+Look for: `* Running on http://localhost:5000` in the terminal
 
-### STEP 3: Switch to Browser & Test Web UI
+---
 
-1. Open a **new browser tab** (keep terminal in view)
-2. Navigate to `http://localhost:5000`
-3. Screen-record the following interactions:
+## SECTION C: Web UI Demo - Test Profile 1 (1:30-3:30)
 
-**Section C (2:00-4:30):** Interactive Web Demo
-- Show health check showing "✅ System Healthy | 30 Songs | 14 Genres"
-- Click "Pop/Happy" quick profile button
-- Wait for recommendations to load (show spinning animation)
-- Point out:
-  - Confidence score (circular display)
-  - 4-step workflow in sidebar (Score → Discover → Explore → Validate)
-  - 5 recommendation cards with scores, reasons, and source
-  - AI reasoning narrative at bottom
-- Say: "The system retrieved songs using semantic similarity across 6 dimensions: genre, mood, energy, tempo, acousticness, and valence. Each recommendation explains its reasoning."
+### What to Show:
+1. **Open the browser tab** with http://localhost:5000
+2. **Point out the interface**:
+   - Input panel on left (genre, mood, energy, acoustic preference)
+   - Quick profile buttons (Pop/Happy, Lofi/Chill, Rock/Intense)
+   - Output panel on right (empty initially)
 
-**Section D (4:30-6:30):** Run Evaluation
-- Scroll down to "System Evaluation" section
-- Click "Run Full Evaluation"
-- Wait for metrics to compute
-- Show results:
-  - Diversity (genre/artist variety)
-  - Relevance (preference matching)
-  - Novelty (discovery outside stated genre)
-  - Calibration (confidence accuracy)
-  - Overall Score
-- Say: "The system achieves high marks across all metrics. These are reliability tests showing how well the AI performs across multiple user profiles."
+3. **Click "Pop/Happy" quick profile button**
+   - Let it load (show the spinning animation)
+   - Highlight the results:
+     - **Confidence Score**: Show the percentage (e.g., 87%)
+     - **Workflow Steps**: Read them aloud:
+       - "Step 1: Found X direct matches"
+       - "Step 2: Retrieved X similar songs via RAG"
+       - "Step 3: Explored X adjacent genres"
+       - "Step 4: Final confidence score"
+     - **Recommendation Cards**: Scroll through the 5 recommendations
+       - Point out: title, artist, genre, score, source (Direct/RAG/Exploration)
+       - Show a couple of the "reasons" explaining the recommendation
+     - **AI Reasoning**: Show the narrative explanation at bottom
 
-**Section E (6:30-8:00):** Show Code
-- Switch back to terminal
-- Run: `cat src/agent.py | head -50`
-- Say: "The core AI logic uses a multi-step planning approach. Here's the Agent class that orchestrates the workflow."
-- Then show: `head -10 README.md` 
-- Say: "Full documentation is available on GitHub with architecture diagrams and design decisions."
+### What to Say:
+> "When I clicked the Pop/Happy profile, the system executed a 4-step workflow. First, it scored all songs based on my preferences using content-based filtering. Then it used the RAG retriever to find semantically similar songs across 6 dimensions: genre, mood, energy, tempo, acousticness, and valence. This enables discovery beyond exact matches. Third, it explored adjacent genres to find unexpected recommendations. Finally, it computed a confidence score of 87% based on score quality, diversity, and match strength. Each recommendation includes reasoning explaining why it matches my taste."
 
-### STEP 4: Finish Recording
-- Click "Stop" in Loom
-- Get your share link and add to README
+---
+
+## SECTION D: Web UI Demo - Test Profile 2 (3:30-4:30)
+
+### What to Show:
+1. Click "Lofi/Chill" quick profile button
+2. Show how different preferences generate different recommendations
+3. Point out the **lower confidence score** (because lofi has fewer exact matches)
+4. Highlight that the **workflow is still 4 steps** but with different recommendations
+
+### What to Say:
+> "Now let me try the Lofi/Chill profile. Notice the workflow is the same - 4 steps - but the recommendations are completely different because the preferences changed. The system adapts its retrieval strategy based on what's available in each genre. This demonstrates the flexibility of the agentic approach."
+
+---
+
+## SECTION E: Run Evaluation (4:30-6:00)
+
+### What to Show:
+1. **Scroll down** to "System Evaluation" section
+2. **Click "Run Full Evaluation"** button
+3. **Wait for metrics to compute** (show the loading spinner)
+4. **Show the results cards**:
+   - Diversity (%)
+   - Relevance (%)
+   - Novelty (%)
+   - Calibration (%)
+   - Overall Score (%)
+
+5. **Read the evaluation summary** text below the metrics
+
+### What to Say:
+> "Now I'm running the full system evaluation. The system tests itself on four different user profiles and measures performance across four dimensions. Diversity measures genre and artist variety in the recommendations. Relevance measures how well they match the stated preferences. Novelty measures discovery - how many recommendations are outside the user's favorite genre. Calibration measures whether the confidence scores are accurate - does a 90% confidence score actually mean a good recommendation? These metrics together give us reliability data showing the system works consistently well."
+
+---
+
+## SECTION F: Show Code & Documentation (6:00-7:30)
+
+### What to Show:
+1. **Switch back to terminal**
+2. **Show the agent code**:
+   ```bash
+   cat src/agent.py | head -60
+   ```
+   - Point out the RecommendationPlan dataclass
+   - Highlight the plan_recommendations() method
+   - Explain the 4 steps
+
+3. **Show the README**:
+   ```bash
+   head -40 README.md
+   ```
+   - Point out that it documents extending Module 3
+   - Mention the architecture section
+
+### What to Say:
+> "The core AI logic is in the Agent class, which orchestrates the 4-step workflow. You can see the RecommendationPlan dataclass that holds the results, and the plan_recommendations method that executes the workflow. The full documentation is available in the README with architecture diagrams, design decisions, and bias analysis. All the code is also available on GitHub at the link at the bottom of the page."
+
+---
+
+## SECTION G: Final Summary (7:30-8:00)
+
+### What to Show:
+1. Go back to browser
+2. **Highlight the GitHub link** at the bottom of the page
+3. Show both repo structure and web interface one more time
+
+### What to Say:
+> "VibeFinder Pro demonstrates a complete applied AI system with three key features: RAG retrieval for semantic similarity enabling discovery, an agentic workflow for multi-step reasoning, and a reliability evaluation framework proving the system works. The web interface makes it easy to interact with and test the system. All code is on GitHub, tested with 15+ unit tests, and documented with architecture diagrams and bias analysis. Thank you!"
+
+---
+
+## 📋 RECORDING CHECKLIST
+
+Before you hit record:
+- ☐ Web server is running (`./run.sh` completed successfully)
+- ☐ Browser is open to http://localhost:5000
+- ☐ Terminal is visible and zoomed for readability
+- ☐ Microphone is on
+- ☐ You have Loom recording ready
+
+As you record:
+- ☐ Speak clearly and explain what you're showing
+- ☐ Don't rush - let each section load fully
+- ☐ Click the quick profile buttons to show different profiles
+- ☐ Let the evaluation run to completion
+- ☐ Show both code and UI
+
+After recording:
+- ☐ Get the Loom share link
+- ☐ Copy it (format: `https://www.loom.com/share/xxxxxxxxxxxxx`)
+- ☐ Add to README.md in "Video Walkthrough" section
+- ☐ Push to GitHub
+
+---
+
+## 🎯 KEY POINTS TO EMPHASIZE
+
+1. **RAG Enhancement**: Explain the 6-dimensional similarity computation
+2. **Agentic Workflow**: Walk through the 4 steps verbally
+3. **Reliability Testing**: Show the evaluation metrics proving quality
+4. **Beautiful UI**: Point out the responsive design and visual elements
+5. **Extension of Module 3**: Mention this extends the original recommender
+
+---
+
+## ⏰ TIMING BREAKDOWN
+
+| Section | Time | Content |
+|---------|------|---------|
+| A | 0:00-1:00 | Setup & project structure |
+| B | 1:00-1:30 | Start web server |
+| C | 1:30-3:30 | Pop/Happy profile demo |
+| D | 3:30-4:30 | Lofi/Chill profile demo |
+| E | 4:30-6:00 | Run evaluation |
+| F | 6:00-7:30 | Show code & docs |
+| G | 7:30-8:00 | Final summary |
+
+**Total: 8 minutes** (perfect for Loom)
+
+---
+
+## 🚨 TROUBLESHOOTING
+
+**If the web server won't start:**
+- Make sure Flask is installed: `pip install flask flask-cors`
+- Make sure you're in the right directory: `cd ~/applied-ai-system-final`
+- Check for port conflicts: `lsof -i :5000`
+
+**If the browser won't load:**
+- Clear browser cache (Cmd+Shift+Delete on Mac)
+- Try incognito/private window
+- Make sure terminal shows: `* Running on http://localhost:5000`
+
+**If evaluation hangs:**
+- Just close the browser and restart - evaluation can take 10-15 seconds
+- The fallback is to show terminal output instead
+
+---
+
+## ✅ READY? START RECORDING!
+
+```bash
+cd ~/applied-ai-system-final
+./run.sh
+# Then open https://www.loom.com and hit record!
+```
+
+Follow the sections A-G above and you'll have a great demo.
+
+---
+
+## 📝 AFTER YOU GET YOUR LOOM LINK
+
+1. Copy your Loom share link (format: `https://www.loom.com/share/xxxxx`)
+2. Edit README.md and find the "Video Walkthrough" section
+3. Add your link:
+   ```markdown
+   ## Video Walkthrough
+
+   Watch the complete system demo: [VibeFinder Pro - Loom Video](https://www.loom.com/share/xxxxx)
+   ```
+4. Commit and push:
+   ```bash
+   git add README.md
+   git commit -m "Add Loom video walkthrough"
+   git push
+   ```
+
+Then you're done! Ready to submit! 🎉
 
 ---
 
